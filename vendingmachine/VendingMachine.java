@@ -21,6 +21,10 @@ public class VendingMachine {
 
     }
 
+    public void setInventory(Inventory inventory) {
+        this.inventory = inventory;
+    }
+
     public VendingMachineStatus getVendingMachineStatus(){
         return this.vendingMachineStatus;
     }
@@ -33,6 +37,7 @@ public class VendingMachine {
         return this.inventory;
     }
     public void setInventory(Inventory inventory){
+        this.inventory = inventory;
 
     }
 
