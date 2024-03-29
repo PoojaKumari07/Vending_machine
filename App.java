@@ -2,6 +2,7 @@ import coin.Coin;
 import item.Item;
 import item.ItemShelf;
 import vendingmachine.VendingMachine;
+import vendingmachine.VendingMachineStatus;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -16,6 +17,13 @@ public class App {
         System.out.println("Display the Inventory");
 
         displayInventory(vendingMachine);
+
+        VendingMachineStatus vendingMachineStatus = vendingmachine.getVendingMachineStatus();
+        vendingMachineStatus.insertCoin(vendingmachine, Coin.FIFTY);
+        vendingMachineStatus.insertCoin(vendingmachine, Coin.TWENTY);
+
+        vendingMachineStatus.chooseProduct(vendingmachine, 102);
+        displayInventory(vendingmachine);
 
     }
 
