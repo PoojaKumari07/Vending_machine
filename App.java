@@ -10,13 +10,13 @@ public class App {
 
         // int value = Coin.FIFTY.getValue();
         // System.out.println(value);
-        VendingMachine vendingMachine = new VendingMachine();
+        VendingMachine vendingmachine = new VendingMachine();
         System.out.println("| Fill the Inventory |");
-        fillInventory(vendingMachine);
+        fillInventory(vendingmachine);
 
         System.out.println("Display the Inventory");
 
-        displayInventory(vendingMachine);
+        displayInventory(vendingmachine);
 
         VendingMachineStatus vendingMachineStatus = vendingmachine.getVendingMachineStatus();
         vendingMachineStatus.insertCoin(vendingmachine, Coin.FIFTY);
@@ -27,8 +27,8 @@ public class App {
 
     }
 
-    private static void fillInventory(VendingMachine vendingMachine) {
-        ItemShelf[] itemshelfSlots = vendingMachine.getInventory().getInventory();
+    private static void fillInventory(VendingMachine vendingmachine) {
+        ItemShelf[] itemshelfSlots = vendingmachine.getInventory().getInventory();
         for (int i = 0; i < itemshelfSlots.length; i++) {
             Item item = new Item();
             if (i == 0 || i == 8) {
@@ -61,8 +61,8 @@ public class App {
         }
     }
 
-    private static void displayInventory(VendingMachine vendingMachine) {
-        ItemShelf[] itemShelfSlots = vendingMachine.getInventory().getInventory();
+    private static void displayInventory(VendingMachine vendingmachine) {
+        ItemShelf[] itemShelfSlots = vendingmachine.getInventory().getInventory();
         System.out.println(itemShelfSlots.length);
         for (ItemShelf shelf : itemShelfSlots) {
             System.out.println("Item code: " + shelf.getItemCode() + " Item: " + shelf.getItem().getType() + " Price: "
